@@ -1,0 +1,226 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    margin-top: 10px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-header {
+    margin: 50px 0;
+}
+
+.main-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 20px;
+    color: #aaa;
+}
+
+.presentation, .teaser, .portfolio, .contact-form {
+    text-align: center;
+    margin: 20px;
+}
+
+.presentation h2, .teaser h2, .portfolio h1, .contact-form h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.teaser-project {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.teaser-project img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+button.prev, button.next {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #aaa;
+}
+
+.teaser-projects {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.teaser-project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1em;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-links a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    position: relative; /* Position relative pour les éléments enfants */
+    color: #fff; /* Couleur du texte */
+}
+
+.nav-links {
+    position: absolute; /* Position absolue pour la navigation */
+    top: 20px; /* Distance du haut */
+    right: 20px; /* Distance de la droite */
+}
+
+.main-header {
+    background-image: url('images/background.jpg'); /* Chemin vers votre image en arrière-plan */
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la zone */
+    background-position: center; /* Centre l'image horizontalement et verticalement */
+    padding: 300px 0; /* Ajoute un espace autour du contenu */
+    text-align: center; /* Centre le contenu du header */
+}
+
+/* Pour améliorer la qualité de l'image */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    .main-header {
+        background-image: url('images/background.jpg'); /* Chemin vers une image de qualité supérieure */
+        image-rendering: auto; /* Utiliser le rendu d'image automatique */
+        -webkit-backface-visibility: hidden; /* Masquer le dos de l'image pour les navigateurs WebKit */
+        backface-visibility: hidden; /* Masquer le dos de l'image */
+    }
+}
+
+.main-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 20px;
+    color: #aaa;
+}
