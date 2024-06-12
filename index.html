@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expérience Créative</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Accueil</a>
+            <div class="nav-links">
+                <a href="projects.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <div class="main-header">
+            <h1>Expérience Créative</h1>
+            <p>Un Univers à Explorer</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="presentation">
+            <h2>Présentation</h2>
+            <p>Bienvenue sur mon site. Je suis un créatif passionné par l'art et le design. Découvrez mes projets et n'hésitez pas à me contacter pour toute collaboration.</p>
+        </section>
+
+        <section class="teaser">
+            <h2>Projets Récents</h2>
+            <div class="carousel">
+                <button class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-inner">
+                    <div class="teaser-project">
+                        <a href="projects.html"> <!-- Ajoutez un lien autour de l'image -->
+                            <img src="images/project1.jpg" alt="Description du projet 1" class="project-image">
+                        </a>
+                        <h3>Le sudoku</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <a href="projects.html"> <!-- Ajoutez un lien autour de l'image -->
+                            <img src="images/project2.png" alt="Description du projet 2" class="project-image">
+                        </a>
+                        <h3>Site vitrine</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <img src="images/project3.jpg" alt="Description du projet 3">
+                        <h3>Titre du projet 3</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <img src="images/project4.jpg" alt="Description du projet 4">
+                        <h3>Titre du projet 4</h3>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Expérience Créative. Tous droits réservés.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
