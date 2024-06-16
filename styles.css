@@ -233,14 +233,6 @@ footer {
     margin: 20px;
 }
 
-.main-header {
-    background-image: url('images/background.jpg'); /* Chemin vers votre image en arrière-plan */
-    background-size: cover; /* Redimensionne l'image pour couvrir toute la zone */
-    background-position: center; /* Centre l'image horizontalement et verticalement */
-    padding: 200px 0; /* Ajoute un espace autour du contenu */
-    text-align: center; /* Centre le contenu du header */
-}
-
 .timeline {
     position: relative;
     padding: 20px 0;
