@@ -1,20 +1,24 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background-color: #000;
     color: #fff;
+    background-image: url('images/stars-bg.jpg'); /* Arrière-plan étoilé */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
     padding: 20px;
     text-align: center;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond avec transparence */
 }
 
 .logo {
     font-size: 24px;
-    color: #fff;
+    color: #0ff; /* Couleur néon */
     text-decoration: none;
 }
 
@@ -24,32 +28,83 @@ header {
 
 .nav-links a {
     margin: 0 15px;
-    color: #fff;
+    color: #0ff; /* Couleur néon */
     text-decoration: none;
 }
 
 .main-header {
     margin: 50px 0;
+    background-image: url('images/space-bg.jpg'); /* Image d'arrière-plan spatiale */
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7); /* Ombre pour assombrir un peu l'image */
 }
 
 .main-header h1 {
     font-size: 48px;
     margin: 0;
+    color: #0ff; /* Couleur néon */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; /* Effet de néon */
 }
 
 .main-header p {
     font-size: 20px;
     color: #aaa;
+    text-shadow: 0 0 5px #fff;
 }
 
-.presentation, .teaser, .portfolio, .contact-form {
+.presentation {
+    text-align: center;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
+}
+
+.presentation h2 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #0ff; /* Couleur néon */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.presentation-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    margin: 20px;
+}
+
+.photo img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0ff; /* Effet de néon */
+}
+
+.texte {
+    max-width: 600px;
+    margin: 20px;
+    text-align: left;
+}
+
+.teaser, .portfolio, .contact-form {
     text-align: center;
     margin: 20px;
 }
 
-.presentation h2, .teaser h2, .portfolio h1, .contact-form h1 {
+.teaser h2, .portfolio h1, .contact-form h1 {
     font-size: 36px;
     margin: 20px 0;
+    color: #0ff; /* Couleur néon */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
 .carousel {
@@ -79,11 +134,13 @@ header {
     height: auto;
     display: block;
     margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff; /* Effet de néon */
 }
 
 button.prev, button.next {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #0ff; /* Couleur néon */
     border: none;
     padding: 15px;
     border-radius: 50%;
@@ -104,13 +161,17 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
     transform: translateY(-50%) scale(1.1);
 }
 
 .contact-form {
     max-width: 600px;
     margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
 }
 
 .contact-form .form-group {
@@ -132,95 +193,123 @@ button.prev:hover, button.next:hover {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: #0ff;
     color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #aaa;
-}
-
-.teaser-projects {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.teaser-project img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-button {
-    background-color: #ffffff;
-    border: none;
-    color: #000000;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 1em;
-}
-
-button:hover {
-    background-color: #cccccc;
+    background-color: #00cccc;
 }
 
 footer {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     text-align: center;
     padding: 1em 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 0 20px #0ff;
 }
 
 .footer-links a {
     margin: 0 1em;
     text-decoration: none;
-    color: #ffffff;
+    color: #0ff; /* Couleur néon */
+    transition: color 0.3s;
 }
 
-header {
-    position: relative; /* Position relative pour les éléments enfants */
-    color: #fff; /* Couleur du texte */
+.footer-links a:hover {
+    color: #00cccc;
 }
 
-.nav-links {
-    position: absolute; /* Position absolue pour la navigation */
-    top: 20px; /* Distance du haut */
-    right: 20px; /* Distance de la droite */
+/* Styles pour la section du parcours scolaire */
+.parcours-scolaire {
+    text-align: center;
+    margin: 20px;
 }
 
-.main-header {
-    background-image: url('images/background.jpg'); /* Chemin vers votre image en arrière-plan */
-    background-size: cover; /* Redimensionne l'image pour couvrir toute la zone */
-    background-position: center; /* Centre l'image horizontalement et verticalement */
-    padding: 300px 0; /* Ajoute un espace autour du contenu */
-    text-align: center; /* Centre le contenu du header */
+.parcours-scolaire h2 {
+    font-size: 36px;
+    margin: 20px 0;
 }
 
-/* Pour améliorer la qualité de l'image */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    .main-header {
-        background-image: url('images/background.jpg'); /* Chemin vers une image de qualité supérieure */
-        image-rendering: auto; /* Utiliser le rendu d'image automatique */
-        -webkit-backface-visibility: hidden; /* Masquer le dos de l'image pour les navigateurs WebKit */
-        backface-visibility: hidden; /* Masquer le dos de l'image */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin: 40px 0;
+    position: relative;
+}
+
+.timeline-date {
+    background: #3a3a3a;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 10px; /* Espace entre la date et le bloc */
+}
+
+.timeline-content {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    position: relative;
+}
+
+.timeline-content.left {
+    left: calc(50% - 460px);
+}
+
+.timeline-content.right {
+    left: calc(50% + 60px);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+/* Styles responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .timeline-date {
+        top: 0;
     }
-}
 
-.main-header h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-.main-header p {
-    font-size: 20px;
-    color: #aaa;
+    .timeline-content {
+        width: calc(100% - 40px);
+        left: 20px !important;
+        margin-top: 30px;
+    }
 }

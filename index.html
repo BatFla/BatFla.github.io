@@ -25,8 +25,44 @@
     <main>
         <section class="presentation">
             <h2>Présentation</h2>
-            <p>Bienvenue sur mon site. Je suis un créatif passionné par l'art et le design. Découvrez mes projets et n'hésitez pas à me contacter pour toute collaboration.</p>
+            <div class="presentation-content">
+                <div class="photo">
+                    <img src="images/photo.jpg" alt="Votre Photo">
+                </div>
+                <div class="texte">
+                    <p>Bienvenue sur mon site. Je suis un créatif passionné par l'art et le design. Découvrez mes projets et n'hésitez pas à me contacter pour toute collaboration.</p>
+                    <p>Je m'appelle [Votre Nom] et je suis spécialisé dans [votre spécialisation]. J'ai [nombre] années d'expérience dans ce domaine et j'ai travaillé sur divers projets, notamment [exemples de projets].</p>
+                </div>
+            </div>
         </section>
+
+        <div class="parcours-scolaire">
+            <h2>Parcours scolaire</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content left">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <h3>Brevet - Victoire Daublié Plouzané</h3>
+                        <p>LV1: Anglais<br>LV2: Espagnol<br>Option: Euro Anglais<br>Mention: Très Bien</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content right">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <h3>Bacc - Lycée Amiral Ronarc'h Brest</h3>
+                        <p>Spécialité: Mathématiques / Physique-Chimie et Science de l'ingénieur abandonnée en terminal<br>LV1: Anglais<br>LV2: Espagnol<br>Option: Mathématiques Expertes<br>Mention: Assez bien</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content left">
+                        <div class="timeline-date">2023 - 2026</div>
+                        <h3>B.U.T - I.U.T. Lannion</h3>
+                        <p>En cours actuellement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <section class="teaser">
             <h2>Projets Récents</h2>
@@ -34,13 +70,40 @@
                 <button class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
                 <div class="carousel-inner">
                     <div class="teaser-project">
-                        <a href="projects.html"> <!-- Ajoutez un lien autour de l'image -->
+                        <a href="projects.html">
                             <img src="images/project1.jpg" alt="Description du projet 1" class="project-image">
                         </a>
                         <h3>Le sudoku</h3>
                     </div>
                     <div class="teaser-project">
-                        <a href="projects.html"> <!-- Ajoutez un lien autour de l'image -->
+                        <a href="projects.html">
+                            <img src="images/project2.png" alt="Description du projet 2" class="project-image">
+                        </a>
+                        <h3>Site vitrine</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <img src="images/project3.png" alt="Description du projet 3">
+                        <h3>Titre du projet 3</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <img src="images/project4.jpg" alt="Description du projet 4">
+                        <h3>Titre du projet 4</h3>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="competence">
+            <h2>Mes compétence</h2>
+                    <div class="teaser-project">
+                        <a href="projects.html">
+                            <img src="images/project1.jpg" alt="Description du projet 1" class="project-image">
+                        </a>
+                        <h3>Le sudoku</h3>
+                    </div>
+                    <div class="teaser-project">
+                        <a href="projects.html">
                             <img src="images/project2.png" alt="Description du projet 2" class="project-image">
                         </a>
                         <h3>Site vitrine</h3>
@@ -53,9 +116,6 @@
                         <img src="images/project4.jpg" alt="Description du projet 4">
                         <h3>Titre du projet 4</h3>
                     </div>
-                </div>
-                <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
-            </div>
         </section>
     </main>
     <footer>
