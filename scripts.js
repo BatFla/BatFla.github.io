@@ -66,4 +66,4 @@ projectImage2.addEventListener('click', () => {
 });
 
 
-next
+next;
