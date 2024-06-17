@@ -273,16 +273,7 @@ button.prev:hover, button.next:hover {
     background-color: #00cccc;
 }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 0 20px #0ff;
-}
+
 
 .footer-links a {
     margin: 0 1em;
@@ -412,4 +403,135 @@ footer {
 .competence p {
     color: #fff;
     margin-bottom: 10px;
+}
+
+.competences h2{
+
+    margin-top: 0;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+
+}
+
+#projects {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.project img {
+    width: 150px; /* Taille réduite pour l'image */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project-content {
+    text-align: left;
+}
+
+.project-content h3 {
+    margin: 10px 0;
+    color: #0ff;
+}
+
+.project-content p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;  /* Augmente le padding pour agrandir le footer */
+    width: 100%;
+    box-shadow: 0 0 20px #0ff;
+    font-size: 1em;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #0ff;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00cccc;
+}
+
+
+.project {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    margin: 30px auto; /* Centrer les projets horizontalement */
+    width: 700px; /* Largeur des blocs de projet */
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0ff;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-out; /* Transition pour l'effet de zoom */
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: scale(1.08); /* Agrandit légèrement le projet au survol */
+}
+
+.project-image {
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espacement en bas de l'image */
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out; /* Transition pour l'effet de zoom */
+}
+
+.project-image:hover img {
+    transform: scale(1.2); /* Agrandit l'image de 20% lorsqu'on passe la souris dessus */
+}
+
+.project h3 {
+    margin: 15px 0;
+    font-size: 24px; /* Taille de police légèrement augmentée */
+    color: #0ff;
+}
+
+.project p {
+    font-size: 18px; /* Taille de police légèrement augmentée */
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    background-color: #0ff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #00cccc;
 }
