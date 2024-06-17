@@ -309,12 +309,41 @@ footer {
     }
 }
 
-.main-header h1 {
-    font-size: 48px;
-    margin: 0;
+.expand-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    border-radius: 5px;
 }
 
-.main-header p {
-    font-size: 20px;
-    color: #aaa;
+.expand-button:hover {
+    background-color: #555;
+}
+.hidden {
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px #0ff;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column; /* Aligner les projets en colonne */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }

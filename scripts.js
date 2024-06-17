@@ -65,5 +65,13 @@ projectImage2.addEventListener('click', () => {
     window.location.href = 'projects.html'; // Redirige vers la page des projets
 });
 
+function toggleContent(id) {
+    var content = document.getElementById(id);
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
 
 next;
