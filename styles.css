@@ -1,18 +1,4 @@
-/* Suppression de l'effet néon sur les titres */
-.main-header h1,
-.presentation h2,
-.teaser h2,
-.portfolio h1,
-.contact-form h1,
-.timeline-content h3,
-.competences h2,
-.competence h3,
-.project h3,
-.contact h2,
-.footer-block h3 {
-    text-shadow: none;
-    color: #0ff; /* Couleur d'origine sans effet néon */
-}
+
 
 .project {
     background-color: rgba(0, 0, 0, 0.8);
@@ -676,4 +662,20 @@ footer {
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+/* Suppression de l'effet néon sur les titres */
+.main-header h1,
+.presentation h2,
+.teaser h2,
+.portfolio h1,
+.contact-form h1,
+.timeline-content h3,
+.competences h2,
+.competence h3,
+.project h3,
+.contact h2,
+.footer-block h3 {
+    text-shadow: none;
+    color: #0ff; /* Couleur d'origine sans effet néon */
 }
