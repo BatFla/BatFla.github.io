@@ -679,3 +679,9 @@ footer {
     text-shadow: none;
     color: #0ff; /* Couleur d'origine sans effet néon */
 }
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #ab00cc;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
