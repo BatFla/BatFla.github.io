@@ -119,8 +119,8 @@ header {
 
 .main-header p {
     font-size: 20px;
-    color: #aaa;
-    text-shadow: 0 0 5px #fff;
+    color: #0319d8;
+    text-shadow: 0 0 5px #35082b;
 }
 
 .presentation {
@@ -255,7 +255,7 @@ button.prev:hover, button.next:hover {
 .contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #9b6f6f;
     border-radius: 5px;
 }
 
@@ -375,7 +375,7 @@ button.prev:hover, button.next:hover {
 
 .main-header p {
     font-size: 20px;
-    color: #aaa;
+    color: #4a0075;
 }
 
 .competences {
@@ -534,4 +534,132 @@ footer {
 
 .project-link:hover {
     background-color: #00cccc;
+}
+
+
+.contact {
+    background-color: #222; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte */
+    padding: 20px; /* Espace intérieur autour du contenu */
+    margin: 20px; /* Marge extérieure autour du bloc */
+    border-radius: 8px; /* Coins arrondis du bloc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    max-width: 620px; /* Largeur maximale du bloc */
+    margin: 20px auto; /* Centrage horizontal avec des marges automatiques */
+}
+
+.contact h2 {
+    text-align: center;
+    color: #0ff; /* Couleur du texte pour les titres */
+    margin-bottom: 20px; /* Marge en bas du titre */
+}
+
+.contact p {
+    text-align: center;
+    color: #ccc; /* Couleur du texte pour les paragraphes */
+    font-size: 1.1rem;
+    margin-bottom: 40px; /* Marge en bas du paragraphe */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc; /* Couleur du texte pour les labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Bordure plus foncée */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333; /* Fond plus foncé */
+    color: #fff; /* Couleur du texte */
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #0ff; /* Couleur de fond pour le bouton */
+    color: #222; /* Couleur du texte pour le bouton */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #00cccc; /* Couleur de fond au survol */
+}
+
+
+
+
+footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Répartit les blocs également sur la largeur */
+    align-items: center;
+}
+
+.footer-block {
+    text-align: left;
+    margin-right: 20px; /* Espacement entre les blocs */
+}
+
+.footer-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-block p {
+    margin: 5px 0;
+}
+
+.footer-block i {
+    margin-right: 5px;
+}
+
+.footer-block a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-block a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 5px; /* Espacement entre les réseaux sociaux et le titre */
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
