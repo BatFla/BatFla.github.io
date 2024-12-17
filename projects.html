@@ -3,108 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Détails du Projet</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-gray-800 p-4">
         <nav>
-            <a href="index.html" class="logo">Accueil</a>
-            <div class="nav-links">
-                <a href="projects.html">Projets</a>
-                <a href="contact.html">Contact</a>
-                <a href="CV.pdf" download class="btn-download-cv">Mon CV</a>
-            </div>
+            <a href="index.html" class="text-lg font-bold text-gray-200">Retour à l'accueil</a>
         </nav>
-        <div class="main-header">
-            <h1>Mes Projets</h1>
-            <p>Explorez mes projets pour en savoir plus sur mon travail.</p>
-        </div>
     </header>
 
-    <main>
-        <section id="projects">
-            <h2>Mes Projets Scolaires</h2>
-            <div class="project">
-                <img src="images/project1.jpg" alt="Project 1">
-                <div class="project-content">
-                    <h3>Réaliser un développement d'application</h3>
-                    <p>Conception d'un jeu de sudoku en langage C. de la maquette
-                        en passant par le cahier de tests
-                        puis par l'algorithme
-                        ensuite, le code source
-                        et pour finir, les traces d'exécution"</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project1bis.png" alt="Project 2">
-                <div class="project-content">
-                    <h3>Réaliser un développement d'application</h3>
-                    <p>Création d'une application de A à Z de création d'une facture en se basant sur le numéro de réservation du client.
-                        Ce travail fut réaliser à l'aide du langage JAVA.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project2.png" alt="Project 3">
-                <div class="project-content">
-                    <h3>Optimiser des applications informatiques</h3>
-                    <p>Nous avons examiné le problème du Parcours du Cavalier en utilisant la théorie des graphes et nous avons tenté de le résoudre en améliorant l'algorithme à l'aide de diverses techniques.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project3.png" alt="Project 3">
-                <div class="project-content">
-                    <h3>Administrer des systèmes informatiques communicants complexes</h3>
-                    <p>Ce projet consiste à mettre en place et configurer des services réseau pour le développement et le déploiement d'applications informatiques communicantes, en réponse à une demande client spécifique. L'objectif est de répondre aux besoins requis pour développer un site web.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project4.png" alt="Project 3">
-                <div class="project-content">
-                    <h3>Gérer des données de l'information</h3>
-                    <p>Ce projet a pour but d'implanter, peupler et exploiter une base de données réaliste. Il s'appuiera sur mes compétences en traduction de modèles de données à partir de diagrammes de classe UML vers un schéma relationnel en SQL, ainsi que sur mes connaissances en mathématiques pour l'analyse statistique des données extraites. La gestion de projet sera également essentielle pour planifier efficacement toutes les étapes du processus.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project5.png" alt="Project 3">
-                <div class="project-content">
-                    <h3>Conduite de projet</h3>
-                    <p>Ce projet ci avait pour but de récolter les besoins d'un client pour pouvoir ensuite faire la charte graphique, le maquettage puis pour finir, le développement du site vitrine dont le client avait besoin.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="images/project6.png" alt="Project 3">
-                <div class="project-content">
-                    <h3>Travailler dans une équipe informatique</h3>
-                    <p>Et pour le dernier projet, en équipe de 3 ou 4, on devait préparer un team building pour une entreprise qu'on avait au préalable choisie, on devait donc passer par l'étape de la plannification, puis la réalisation d'un flyer un pour finir une vidéo de présentation pour permettre aux employés d'être au courant et leurs donner envie de participer.</p>
-                </div>
-            </div>
-            <!-- Ajoutez d'autres projets ici -->
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-block">
-                <h3>Coordonnées</h3>
-                <p><i class="fas fa-envelope"></i> Mail : <a href="mailto:frollabaptiste@gmail.com">frollabaptiste@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> Tél : <a href="tel:+33782265308">07 82 26 53 08</a></p>
-            </div>
-            <div class="footer-block">
-                <h3>Localisations</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Brest (Plouzané) 29280, France</p>
-                <p><i class="fas fa-map-marker-alt"></i> Lannion 22300, France</p>
-            </div>
-            <div class="footer-block">
-                <h3>Réseaux</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/votreprofil" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/BaptisteFrolla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <!-- Ajoutez d'autres réseaux sociaux si nécessaire -->
-                </div>
-            </div>
+    <main class="container mx-auto p-6">
+        <div id="project-details" class="text-center">
+            <!-- Le contenu des détails du projet sera injecté ici -->
         </div>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
-    <script src="scripts.js"></script>
+    </main>
+
+    <script>
+        // Récupérer l'ID du projet depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id'); // Exemple: "project1"
+
+        // Vérifier si l'ID est bien passé dans l'URL
+        if (!projectId) {
+            document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Aucun projet sélectionné.</p>";
+        }
+
+        // Charger les données du projet depuis un fichier JSON
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.find(p => p.id === projectId); // Trouver le projet par ID
+                if (project) {
+                    // Mettre à jour la page avec les données du projet
+                    document.getElementById('project-details').innerHTML = `
+                        <h1 class="text-3xl font-bold text-gray-200">${project.title}</h1>
+                        <p class="text-gray-400 mt-4">${project.description}</p>
+                        <img src="${project.image}" alt="${project.title}" class="mt-4 rounded-lg max-w-lg mx-auto">
+                        <a href="projects.html" class="text-blue-500 hover:underline mt-4 inline-block">Retour à la liste des projets</a>
+                    `;
+                } else {
+                    // Si le projet n'est pas trouvé, afficher un message d'erreur
+                    document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Projet non trouvé.</p>";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Erreur de chargement des données.</p>";
+            });
+    </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "project1",
+        "title": "Développement Web",
+        "description": "Ce projet consiste à développer un site web interactif.",
+        "image": "images/project1.jpg"
+    },
+    {
+        "id": "project2",
+        "title": "Optimiser des applications informatiques",
+        "description": "Nous avons examiné le problème du Parcours du Cavalier en utilisant la théorie des graphes et nous avons tenté de le résoudre en améliorant l'algorithme à l'aide de diverses techniques.",
+        "image": "images/project2.png"
+    },
+    {
+        "id": "project3",
+        "title": "Optimiser des applications informatiques",
+        "description": "Nous avons examiné le problème du Parcours du Cavalier en utilisant la théorie des graphes et nous avons tenté de le résoudre en améliorant l'algorithme à l'aide de diverses techniques.",
+        "image": "images/project3.png"
+    },
+    {
+        "id": "project4",
+        "title": "Optimiser des applications informatiques",
+        "description": "Nous avons examiné le problème du Parcours du Cavalier en utilisant la théorie des graphes et nous avons tenté de le résoudre en améliorant l'algorithme à l'aide de diverses techniques.",
+        "image": "images/project4.png"
+    }
+]

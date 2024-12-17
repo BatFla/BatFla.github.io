@@ -4,153 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expérience Créative</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Accueil</a>
-            <div class="nav-links">
-                <a href="projects.html">Projets</a>
-                <a href="contact.html">Contact</a>
-                <a href="CV.pdf" download class="btn-download-cv">Mon CV</a>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-800">
+        <nav class="flex justify-between p-6 container mx-auto">
+            <a href="index.html" class="text-white text-2xl font-bold">Accueil</a>
+            <div class="flex space-x-8 items-center">
+                <a href="projects.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                <a href="CV.pdf" download class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">Mon CV</a>
             </div>
         </nav>
-        <div class="main-header">
-            <h1>Mon Portfolio</h1>
-            <p>Un Univers à Explorer</p>
+        <div class="text-center py-24">
+            <h1 class="text-5xl font-extrabold text-gray-200 mb-4">Mon Portfolio</h1>
+            <p class="text-xl text-gray-400">Un Univers à Explorer</p>
         </div>
     </header>
+
     <main>
-        <section class="presentation">
-            <h2>Présentation</h2>
-            <div class="presentation-content">
-                <div class="photo">
-                    <img src="images/photo.jpg" alt="Votre Photo">
+        <!-- Présentation -->
+        <section class="presentation py-16 px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-200 mb-10">Présentation</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center md:space-x-12 space-y-10 md:space-y-0">
+                <div class="flex-shrink-0 w-full md:w-1/3">
+                    <img src="images/photo.jpg" alt="Votre Photo" class="w-72 h-72 object-cover rounded-full border-8 border-blue-500 shadow-lg mx-auto">
                 </div>
-                <div class="texte">
-                    <p>Bienvenue sur mon site. Je suis Baptiste FROLLA je suis actuellement étudiant en BUT informatique à l'IUT de Lannion. Mon objectif est de travailler dans la base de données ou dans l'ia. Je recherche donc un stage dans ce milieu.</p>
-                    <p>De plus, je suis quelqu'un de passionné et de curieux, mais ça je vous laisse le découvrir par vous même lors de la visite de mon portfolio.</p>
+                <div class="text-center md:text-left w-full md:w-2/3">
+                    <p class="text-lg text-gray-300 mb-6">Bienvenue sur mon site. Je suis Baptiste FROLLA, étudiant en BUT informatique à l'IUT de Lannion. Mon objectif est de travailler dans les bases de données ou l'IA. Je suis passionné et curieux !</p>
+                    <p class="text-lg text-gray-300">De plus, je suis quelqu'un de curieux, ce qui m'amène à explorer de nouvelles technologies et à me perfectionner constamment dans mon domaine.</p>
                 </div>
-            </div>
-        </section>
-        <div class="parcours-scolaire">
-            <h2>Parcours scolaire</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content left">
-                        <div class="timeline-date">2019 - 2020</div>
-                        <h3>Brevet - Victoire Daublié Plouzané</h3>
-                        <p>LV1: Anglais<br>LV2: Espagnol<br>Option: Euro Anglais<br>Mention: Très Bien</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content right">
-                        <div class="timeline-date">2021 - 2023</div>
-                        <h3>Bacc - Lycée Amiral Ronarc'h Brest</h3>
-                        <p>Spécialité: Mathématiques / Physique-Chimie et Science de l'ingénieur abandonnée en terminal<br>LV1: Anglais<br>LV2: Espagnol<br>Option: Mathématiques Expertes<br>Mention: Assez bien</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content left">
-                        <div class="timeline-date">2023 - 2026</div>
-                        <h3>B.U.T - I.U.T. Lannion</h3>
-                        <p>En cours actuellement</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section class="teaser">
-            <h2>Mes compétences/Projets</h2>
-            <div class="carousel">
-                <button class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-                <div class="carousel-inner">
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                            <img src="images/project1.jpg" alt="Description du projet 1" class="project-image">
-                        </a>
-                        <h3>Réaliser un développement d'application</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                            <img src="images/project1bis.png" alt="Description du projet 2" class="project-image">
-                        </a>
-                        <h3>Réaliser un développement d'application</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                        <img src="images/project2.png" alt="Description du projet 3">
-                        </a>
-                        <h3>Administrer des systèmes informatiques communicants complexes</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                        <img src="images/project3.png" alt="Description du projet 3">
-                        </a>
-                        <h3>Optimiser des applications informatiques</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                        <img src="images/project4.png" alt="Description du projet 4">
-                        </a>
-                        <h3>Gérer des données de l'information</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                        <img src="images/project5.png" alt="Description du projet 4">
-                        </a>
-                        <h3>Conduite de projet</h3>
-                    </div>
-                    <div class="teaser-project">
-                        <a href="projects.html">
-                        <img src="images/project6.png" alt="Description du projet 4">
-                        </a>
-                        <h3>Travailler dans une équipe informatique</h3>
-                    </div>
-                </div>
-                <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
-        <section class="competences">
-            <h2>Mes Passions</h2>
-            <div class="competence">
-                <h3>Le sport</h3>
-                <p>J'ai dédié la majeure partie de ma vie au sport, c'est une vraie passion, un art de vivre. Mais notamment le rugby car oui, je suis un ancien rugbyman avec environ 11 ans de rugby derrière lui qui attend patiemment de pouvoir rejouer.</p>
+        <!-- Parcours scolaire -->
+        <section class="parcours-scolaire py-16 px-6 bg-gray-800">
+            <h2 class="text-4xl font-bold text-center text-gray-200 mb-10">Parcours Scolaire</h2>
+            <div class="timeline space-y-8 mx-auto max-w-5xl">
+                <div class="timeline-item flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
+                    <div class="timeline-date text-blue-500 font-semibold text-xl mb-4 md:mb-0">2019 - 2020</div>
+                    <div class="timeline-content ml-0 md:ml-8 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-200">Brevet - Victoire Daublié Plouzané</h3>
+                        <p class="text-gray-400">LV1: Anglais, LV2: Espagnol, Mention: Très Bien</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
+                    <div class="timeline-date text-blue-500 font-semibold text-xl mb-4 md:mb-0">2021 - 2023</div>
+                    <div class="timeline-content ml-0 md:ml-8 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-200">Bacc - Lycée Amiral Ronarc'h Brest</h3>
+                        <p class="text-gray-400">Spécialité: Mathématiques, Mention: Assez Bien</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
+                    <div class="timeline-date text-blue-500 font-semibold text-xl mb-4 md:mb-0">2023 - 2026</div>
+                    <div class="timeline-content ml-0 md:ml-8 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-200">B.U.T - I.U.T. Lannion</h3>
+                        <p class="text-gray-400">En cours actuellement</p>
+                    </div>
+                </div>
             </div>
-            <div class="competence">
-                <h3>La musique</h3>
-                <p>Bien que je délaisse cet art qu'est la musique, il n'en reste pas moins une part de ma vie également, je me suis intéressé à diverses instruments au court de ma vie mais les principaux restent la guitare et le piano.</p>
-            </div>
-            <!-- Ajoutez d'autres compétences ici -->
         </section>
+
+        <!-- Teaser / Projets -->
+        <section class="teaser py-20 px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-200 mb-12">Mes compétences / Projets</h2>
+            <div class="relative carousel overflow-hidden max-w-5xl mx-auto">
+                <button class="prev absolute top-1/2 left-0 transform -translate-y-1/2 p-4 bg-gray-800 text-white rounded-full shadow-lg hover:bg-blue-500 transition" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-inner flex transition-transform duration-700 ease-in-out" id="carousel">
+                    <!-- Project Slide 1 -->
+                    <div class="teaser-project flex-shrink-0 w-full p-4 text-center mx-2">
+                        <a href="projects.html">
+                            <img src="images/project1.jpg" alt="Projet 1" class="w-96 h-96 object-cover rounded-lg shadow-xl mx-auto">
+                        </a>
+                        <h3 class="mt-6 text-2xl font-semibold text-gray-200">Réaliser un développement d'application</h3>
+                    </div>
+                    <!-- Project Slide 2 -->
+                    <div class="teaser-project flex-shrink-0 w-full p-4 text-center mx-2">
+                        <a href="projects.html">
+                            <img src="images/project1bis.png" alt="Projet 2" class="w-96 h-96 object-cover rounded-lg shadow-xl mx-auto">
+                        </a>
+                        <h3 class="mt-6 text-2xl font-semibold text-gray-200">Réaliser un développement d'application</h3>
+                    </div>
+                    <!-- Project Slide 3 -->
+                    <div class="teaser-project flex-shrink-0 w-full p-4 text-center mx-2">
+                        <a href="projects.html">
+                            <img src="images/project2.png" alt="Projet 3" class="w-96 h-96 object-cover rounded-lg shadow-xl mx-auto">
+                        </a>
+                        <h3 class="mt-6 text-2xl font-semibold text-gray-200">Administrer des systèmes informatiques</h3>
+                    </div>
+                    <!-- Project Slide 4 -->
+                    <div class="teaser-project flex-shrink-0 w-full p-4 text-center mx-2">
+                        <a href="projects.html">
+                            <img src="images/project3.png" alt="Projet 4" class="w-96 h-96 object-cover rounded-lg shadow-xl mx-auto">
+                        </a>
+                        <h3 class="mt-6 text-2xl font-semibold text-gray-200">Optimiser des applications informatiques</h3>
+                    </div>
+                </div>
+
+                <button class="next absolute top-1/2 right-0 transform -translate-y-1/2 p-4 bg-gray-800 text-white rounded-full shadow-lg hover:bg-blue-500 transition" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <footer class="bg-gray-800 py-8 mt-16">
+            <div class="container mx-auto text-center text-gray-400">
+                <div class="footer-block">
+                    <h3>Coordonnées</h3>
+                    <p><i class="fas fa-envelope"></i> Mail : <a href="mailto:frollabaptiste@gmail.com">frollabaptiste@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> Tél : <a href="tel:+33782265308">07 82 26 53 08</a></p>
+                </div>
+                <div class="footer-block">
+                    <h3>Localisations</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Brest (Plouzané) 29280, France</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lannion 22300, France</p>
+                </div>
+                <div class="footer-block">
+                    <h3>Réseaux</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/votreprofil" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/BaptisteFrolla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <!-- Ajoutez d'autres réseaux sociaux si nécessaire -->
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+        </footer>
     </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-block">
-                <h3>Coordonnées</h3>
-                <p><i class="fas fa-envelope"></i> Mail : <a href="mailto:frollabaptiste@gmail.com">frollabaptiste@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> Tél : <a href="tel:+33782265308">07 82 26 53 08</a></p>
-            </div>
-            <div class="footer-block">
-                <h3>Localisations</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Brest (Plouzané) 29280, France</p>
-                <p><i class="fas fa-map-marker-alt"></i> Lannion 22300, France</p>
-            </div>
-            <div class="footer-block">
-                <h3>Réseaux</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/votreprofil" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/BaptisteFrolla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <!-- Ajoutez d'autres réseaux sociaux si nécessaire -->
-                </div>
-            </div>
-        </div>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
-    <script src="scripts.js"></script>
+
+    <!-- Script pour le slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.teaser-project');
+        const carousel = document.getElementById('carousel');
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+
 </body>
 </html>

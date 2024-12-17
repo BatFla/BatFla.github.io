@@ -3,69 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Expérience Créative</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Accueil</a>
-            <div class="nav-links">
-                <a href="projects.html">Projets</a>
-                <a href="contact.html" class="current">Contact</a>
-                <a href="CV.pdf" download class="btn-download-cv">Mon CV</a>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-800">
+        <nav class="flex justify-between p-6 container mx-auto">
+            <a href="index.html" class="text-white text-2xl font-bold">Accueil</a>
+            <div class="flex space-x-8 items-center">
+                <a href="projects.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                <a href="CV.pdf" download class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">Mon CV</a>
             </div>
         </nav>
-        <div class="main-header">
-            <h1>Contactez-moi</h1>
-            <p>Un Univers à Explorer</p>
+        <div class="text-center py-24">
+            <h1 class="text-5xl font-extrabold text-gray-200 mb-4">Contactez-moi</h1>
+            <p class="text-xl text-gray-400">Je serai ravi de répondre à vos questions et de discuter de vos projets.</p>
         </div>
     </header>
 
     <main>
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>Pour toute question ou demande de collaboration, veuillez me contacter via le formulaire ci-dessous.</p>
-            <form action="submit_form.php" method="post">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
+        <!-- Formulaire de contact -->
+        <section class="contact py-16 px-6">
+            <div class="container mx-auto max-w-lg">
+                <h2 class="text-4xl font-bold text-center text-gray-200 mb-10">Envoyer un Message</h2>
+                <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-xl space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-200 font-semibold mb-2">Nom</label>
+                        <input type="text" id="name" name="name" class="w-full p-4 bg-gray-700 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-200 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-4 bg-gray-700 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-200 font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full p-4 bg-gray-700 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">Envoyer</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-block">
-                <h3>Coordonnées</h3>
-                <p><i class="fas fa-envelope"></i> Mail : <a href="mailto:frollabaptiste@gmail.com">frollabaptiste@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> Tél : <a href="tel:+33782265308">07 82 26 53 08</a></p>
-            </div>
-            <div class="footer-block">
-                <h3>Localisations</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Brest (Plouzané) 29280, France</p>
-                <p><i class="fas fa-map-marker-alt"></i> Lannion 22300, France</p>
-            </div>
-            <div class="footer-block">
-                <h3>Réseaux</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/votreprofil" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/BaptisteFrolla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <!-- Ajoutez d'autres réseaux sociaux si nécessaire -->
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 mt-16">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
         </div>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 
-    <script src="scripts.js"></script>
 </body>
 </html>
