@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du Projet</title>
+    <title>Mes Projets</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #project-details {
+            display: none; /* Les détails sont masqués par défaut */
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
     <header class="bg-gray-800 p-4">
@@ -14,15 +19,62 @@
     </header>
 
     <main class="container mx-auto p-6">
-        <div id="project-details" class="bg-gray-800 p-6 rounded shadow">
-            <h1 id="project-title" class="text-3xl font-bold mb-4">Chargement...</h1>
-            <p id="project-description" class="mb-4 text-gray-400">Chargement...</p>
-            <img id="project-image" src="" alt="Image du projet" class="w-full rounded">
+        <h1 class="text-3xl font-bold mb-6">Mes Projets</h1>
+
+        <!-- Section pour la liste des projets -->
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Projet 1 -->
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="images/project1.jpg" alt="Projet 1" class="w-full h-48 object-cover rounded">
+                <h2 class="text-xl font-bold mt-4">Développement Web</h2>
+                <p class="text-gray-400 mt-2">Création d'un site web interactif en HTML, CSS et JavaScript.</p>
+                <button 
+                    onclick="showProjectDetails('project1')" 
+                    class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    En savoir plus
+                </button>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="images/project2.jpg" alt="Projet 2" class="w-full h-48 object-cover rounded">
+                <h2 class="text-xl font-bold mt-4">Application Mobile</h2>
+                <p class="text-gray-400 mt-2">Développement d'une application mobile avec React Native.</p>
+                <button 
+                    onclick="showProjectDetails('project2')" 
+                    class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    En savoir plus
+                </button>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="images/project3.jpg" alt="Projet 3" class="w-full h-48 object-cover rounded">
+                <h2 class="text-xl font-bold mt-4">Analyse de Données</h2>
+                <p class="text-gray-400 mt-2">Analyse de données avec Python et visualisation avec Matplotlib.</p>
+                <button 
+                    onclick="showProjectDetails('project3')" 
+                    class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    En savoir plus
+                </button>
+            </div>
+        </div>
+
+        <!-- Section pour les détails du projet -->
+        <div id="project-details" class="bg-gray-800 p-6 rounded shadow mt-8">
+            <button 
+                onclick="hideProjectDetails()" 
+                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded mb-4">
+                Retour à la liste des projets
+            </button>
+            <h1 id="project-title" class="text-3xl font-bold mb-4">Détails du Projet</h1>
+            <img id="project-image" src="" alt="Image du projet" class="w-full rounded mb-4">
+            <p id="project-description" class="text-gray-400"></p>
         </div>
     </main>
 
     <script>
-        // Liste des projets directement dans le script
+        // Liste des projets en mémoire
         const projects = {
             "project1": {
                 "title": "Développement Web",
@@ -41,21 +93,25 @@
             }
         };
 
-        // Récupérer l'ID du projet depuis l'URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const projectId = urlParams.get('id');
+        // Fonction pour afficher les détails d'un projet
+        function showProjectDetails(projectId) {
+            const project = projects[projectId];
+            if (project) {
+                // Mettre à jour les détails du projet
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-description').textContent = project.description;
+                document.getElementById('project-image').src = project.image;
 
-        // Vérifier si l'ID existe dans les projets
-        const project = projects[projectId];
-        if (project) {
-            document.getElementById('project-title').textContent = project.title;
-            document.getElementById('project-description').textContent = project.description;
-            document.getElementById('project-image').src = project.image;
-        } else {
-            document.getElementById('project-details').innerHTML = `
-                <h1 class="text-3xl font-bold text-red-500">Projet non trouvé</h1>
-                <p class="text-gray-400">Désolé, ce projet n'existe pas.</p>
-            `;
+                // Afficher les détails et cacher la liste
+                document.getElementById('projects-container').style.display = 'none';
+                document.getElementById('project-details').style.display = 'block';
+            }
+        }
+
+        // Fonction pour revenir à la liste des projets
+        function hideProjectDetails() {
+            document.getElementById('projects-container').style.display = 'grid';
+            document.getElementById('project-details').style.display = 'none';
         }
     </script>
 </body>
