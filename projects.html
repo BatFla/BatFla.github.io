@@ -9,48 +9,54 @@
 <body class="bg-gray-900 text-gray-200">
     <header class="bg-gray-800 p-4">
         <nav>
-            <a href="index.html" class="text-lg font-bold text-gray-200">Retour à l'accueil</a>
+            <a href="index.html" class="text-lg font-bold text-gray-200">Accueil</a>
         </nav>
     </header>
 
     <main class="container mx-auto p-6">
-        <div id="project-details" class="text-center">
-            <!-- Le contenu des détails du projet sera injecté ici -->
+        <div id="project-details" class="bg-gray-800 p-6 rounded shadow">
+            <h1 id="project-title" class="text-3xl font-bold mb-4">Chargement...</h1>
+            <p id="project-description" class="mb-4 text-gray-400">Chargement...</p>
+            <img id="project-image" src="" alt="Image du projet" class="w-full rounded">
         </div>
     </main>
 
     <script>
+        // Liste des projets directement dans le script
+        const projects = {
+            "project1": {
+                "title": "Développement Web",
+                "description": "Création d'un site web interactif en HTML, CSS et JavaScript.",
+                "image": "images/project1.jpg"
+            },
+            "project2": {
+                "title": "Application Mobile",
+                "description": "Développement d'une application mobile avec React Native.",
+                "image": "images/project2.jpg"
+            },
+            "project3": {
+                "title": "Analyse de Données",
+                "description": "Analyse de données avec Python et visualisation avec Matplotlib.",
+                "image": "images/project3.jpg"
+            }
+        };
+
         // Récupérer l'ID du projet depuis l'URL
         const urlParams = new URLSearchParams(window.location.search);
-        const projectId = urlParams.get('id'); // Exemple: "project1"
+        const projectId = urlParams.get('id');
 
-        // Vérifier si l'ID est bien passé dans l'URL
-        if (!projectId) {
-            document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Aucun projet sélectionné.</p>";
+        // Vérifier si l'ID existe dans les projets
+        const project = projects[projectId];
+        if (project) {
+            document.getElementById('project-title').textContent = project.title;
+            document.getElementById('project-description').textContent = project.description;
+            document.getElementById('project-image').src = project.image;
+        } else {
+            document.getElementById('project-details').innerHTML = `
+                <h1 class="text-3xl font-bold text-red-500">Projet non trouvé</h1>
+                <p class="text-gray-400">Désolé, ce projet n'existe pas.</p>
+            `;
         }
-
-        // Charger les données du projet depuis un fichier JSON
-        fetch('projects.json')
-            .then(response => response.json())
-            .then(data => {
-                const project = data.find(p => p.id === projectId); // Trouver le projet par ID
-                if (project) {
-                    // Mettre à jour la page avec les données du projet
-                    document.getElementById('project-details').innerHTML = `
-                        <h1 class="text-3xl font-bold text-gray-200">${project.title}</h1>
-                        <p class="text-gray-400 mt-4">${project.description}</p>
-                        <img src="${project.image}" alt="${project.title}" class="mt-4 rounded-lg max-w-lg mx-auto">
-                        <a href="projects.html" class="text-blue-500 hover:underline mt-4 inline-block">Retour à la liste des projets</a>
-                    `;
-                } else {
-                    // Si le projet n'est pas trouvé, afficher un message d'erreur
-                    document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Projet non trouvé.</p>";
-                }
-            })
-            .catch(error => {
-                console.error('Erreur:', error);
-                document.getElementById('project-details').innerHTML = "<p class='text-red-500'>Erreur de chargement des données.</p>";
-            });
     </script>
 </body>
 </html>
